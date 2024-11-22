@@ -21,45 +21,77 @@
 
         private void InitializeComponent()
         {
-            this.dgvEmpresas = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.dgvEmpresas = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            // Inicializar otros controles aquí...
-
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(12, 200);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "Añadir";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(108, 200);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 8;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // dgvEmpresas
             // 
             this.dgvEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpresas.Location = new System.Drawing.Point(12, 12);
+            this.dgvEmpresas.Location = new System.Drawing.Point(21, 39);
             this.dgvEmpresas.Name = "dgvEmpresas";
-            this.dgvEmpresas.Size = new System.Drawing.Size(776, 426);
-            this.dgvEmpresas.TabIndex = 0;
+            this.dgvEmpresas.Size = new System.Drawing.Size(240, 150);
+            this.dgvEmpresas.TabIndex = 9;
+            this.dgvEmpresas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(12, 444);
+            this.txtBuscar.Location = new System.Drawing.Point(96, 13);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(200, 20);
-            this.txtBuscar.TabIndex = 1;
-
-            // Inicializa otros controles, como botones...
-
+            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.TabIndex = 10;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(197, 200);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // FormCompanyList
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvEmpresas);
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtBuscar);
-            // Agregar otros controles aquí...
+            this.Controls.Add(this.dgvEmpresas);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
             this.Name = "FormCompanyList";
-            this.Load += new System.EventHandler(this.FormCompanyList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.DataGridView dgvEmpresas;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

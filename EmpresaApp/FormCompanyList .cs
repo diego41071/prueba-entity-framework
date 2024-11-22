@@ -1,4 +1,7 @@
-﻿using System;
+﻿using EmpresaApp.Data;
+using EmpresaApp.Models;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -6,6 +9,8 @@ namespace EmpresaApp
 {
     public partial class FormCompanyList : Form
     {
+        private List<Empresa> companies; // Declarar la lista de empresas
+
         public FormCompanyList()
         {
             InitializeComponent();
@@ -71,7 +76,7 @@ namespace EmpresaApp
         // Función para cargar las empresas desde la base de datos
         private void LoadCompanies()
         {
-            using (var context = new ApplicationDbContext()) // Asegúrate de que ApplicationDbContext esté configurado correctamente
+            using (var context = new EmpresaContext()) // Asegúrate de que ApplicationDbContext esté configurado correctamente
             {
                 var companies = context.Empresas.ToList(); // Obtén todas las empresas desde la base de datos
                 dgvEmpresas.DataSource = companies; // Establece las empresas como la fuente de datos del DataGridView
@@ -81,7 +86,7 @@ namespace EmpresaApp
         // Función para eliminar una empresa de la base de datos
         private void DeleteCompany(int empresaID)
         {
-            using (var context = new ApplicationDbContext())
+            using (var context = new EmpresaContext())
             {
                 var company = context.Empresas.Find(empresaID); // Busca la empresa por ID
                 if (company != null)
@@ -90,6 +95,11 @@ namespace EmpresaApp
                     context.SaveChanges(); // Guarda los cambios en la base de datos
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
