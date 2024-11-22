@@ -26,21 +26,21 @@ namespace EmpresaApp
         }
 
         // Este evento se ejecuta cuando el usuario hace clic en el botón Añadir
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            FormCompanyEditor formEditor = new FormCompanyEditor();
-            formEditor.ShowDialog(); // Abre el formulario para agregar una nueva empresa
+            FormCompanyEditor formCompanyEditor = new FormCompanyEditor();
+            formCompanyEditor.ShowDialog(); // Abre el formulario para agregar una nueva empresa
             LoadCompanies(); // Recarga los datos después de añadir una nueva empresa
         }
 
         // Este evento se ejecuta cuando el usuario hace clic en el botón Editar
-        private void BtnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
             if (dgvEmpresas.SelectedRows.Count == 1)
             {
                 int empresaID = Convert.ToInt32(dgvEmpresas.SelectedRows[0].Cells[0].Value);
-                FormCompanyEditor formEditor = new FormCompanyEditor(empresaID); // Pasa el ID de la empresa a editar
-                formEditor.ShowDialog();
+                FormCompanyEditor formCompanyEditor = new FormCompanyEditor(empresaID); // Pasa el ID de la empresa a editar
+                formCompanyEditor.ShowDialog();
                 LoadCompanies(); // Recarga los datos después de editar la empresa
             }
             else
@@ -98,6 +98,11 @@ namespace EmpresaApp
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
         {
 
         }

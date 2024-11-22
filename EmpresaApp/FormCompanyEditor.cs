@@ -54,7 +54,7 @@ namespace EmpresaApp
             txtNombre.Text = empresa.Pais;
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             // Validar campos obligatorios
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtCodigo.Text))
@@ -280,6 +280,7 @@ namespace EmpresaApp
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // btnCancelar
             // 
@@ -329,5 +330,7 @@ namespace EmpresaApp
         {
 
         }
+
+        
     }
 }

@@ -57,11 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\EmpresaContext.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormCompanyEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormCompanyEditor.Designer.cs">
+      <DependentUpon>FormCompanyEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompanyList .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompanyList .Designer.cs">
+      <DependentUpon>FormCompanyList .cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202411212229363_InitialCreate.cs" />
     <Compile Include="Migrations\202411212229363_InitialCreate.designer.cs">
@@ -71,6 +77,12 @@
     <Compile Include="Models\Empresa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCompanyEditor.resx">
+      <DependentUpon>FormCompanyEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCompanyList .resx">
+      <DependentUpon>FormCompanyList .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202411212229363_InitialCreate.resx">
       <DependentUpon>202411212229363_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>

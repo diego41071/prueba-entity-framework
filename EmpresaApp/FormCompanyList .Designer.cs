@@ -37,6 +37,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Añadir";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // btnEdit
             // 
@@ -46,6 +47,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // dgvEmpresas
             // 

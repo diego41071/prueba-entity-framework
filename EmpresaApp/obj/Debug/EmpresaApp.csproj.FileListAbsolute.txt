@@ -14,3 +14,5 @@ C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\ob
 C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.exe
 C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.pdb
 C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.Migrations.InitialCreate.resources
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.FormCompanyEditor.resources
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.FormCompanyList.resources
