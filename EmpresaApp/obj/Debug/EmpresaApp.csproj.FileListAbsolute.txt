@@ -1,0 +1,16 @@
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\bin\Debug\EmpresaApp.exe.config
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\bin\Debug\EmpresaApp.exe
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\bin\Debug\EmpresaApp.pdb
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\bin\Debug\EntityFramework.dll
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\bin\Debug\EntityFramework.xml
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.csproj.AssemblyReference.cache
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.Properties.Resources.resources
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.csproj.GenerateResource.cache
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.csproj.CoreCompileInputs.cache
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.csproj.CopyComplete
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.exe
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.pdb
+C:\Users\diego\Desktop\pruebas entrevistas\prueba-entity-framework\EmpresaApp\obj\Debug\EmpresaApp.Migrations.InitialCreate.resources
