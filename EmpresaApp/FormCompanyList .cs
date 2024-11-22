@@ -14,15 +14,21 @@ namespace EmpresaApp
         public FormCompanyList()
         {
             InitializeComponent();
+            this.Load += FormCompanyList_Load;
         }
 
         // Este evento se ejecuta cuando se escribe en el TextBox para filtrar empresas
-        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
         {
-            // Filtra las empresas basándose en el texto ingresado en el TextBox
-            string filter = txtBuscar.Text.ToLower();
-            var filteredCompanies = companies.Where(c => c.Nombre.ToLower().Contains(filter)).ToList();
-            dgvEmpresas.DataSource = filteredCompanies;
+            string filtro = txtBuscar.Text.ToLower();
+
+            using (var context = new EmpresaContext())
+            {
+                var resultados = context.Empresas
+                    .Where(empresa => empresa.Nombre.ToLower().Contains(filtro))
+                    .ToList();
+                dgvEmpresas.DataSource = resultados;
+            }
         }
 
         // Este evento se ejecuta cuando el usuario hace clic en el botón Añadir
@@ -57,7 +63,7 @@ namespace EmpresaApp
                 foreach (DataGridViewRow row in dgvEmpresas.SelectedRows)
                 {
                     int empresaID = Convert.ToInt32(row.Cells[0].Value);
-                    DeleteCompany(empresaID); // Elimina la empresa seleccionada
+                    btnDelete_Click_1(empresaID); // Elimina la empresa seleccionada
                 }
                 LoadCompanies(); // Recarga los datos después de eliminar las empresas
             }
@@ -76,15 +82,15 @@ namespace EmpresaApp
         // Función para cargar las empresas desde la base de datos
         private void LoadCompanies()
         {
-            using (var context = new EmpresaContext()) // Asegúrate de que ApplicationDbContext esté configurado correctamente
+            using (var context = new EmpresaContext())
             {
-                var companies = context.Empresas.ToList(); // Obtén todas las empresas desde la base de datos
-                dgvEmpresas.DataSource = companies; // Establece las empresas como la fuente de datos del DataGridView
+                companies = context.Empresas.ToList(); // Asigna los datos a la lista companies
+                dgvEmpresas.DataSource = companies;    // Establece la lista como fuente de datos del DataGridView
             }
         }
 
         // Función para eliminar una empresa de la base de datos
-        private void DeleteCompany(int empresaID)
+        private void btnDelete_Click_1(int empresaID)
         {
             using (var context = new EmpresaContext())
             {
@@ -98,11 +104,6 @@ namespace EmpresaApp
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnEdit_Click_1(object sender, EventArgs e)
         {
 
         }

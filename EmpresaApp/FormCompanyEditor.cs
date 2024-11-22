@@ -51,7 +51,7 @@ namespace EmpresaApp
             txtTelefono.Text = empresa.Telefono;
             txtCiudad.Text = empresa.Ciudad;
             txtDepartamento.Text = empresa.Departamento;
-            txtNombre.Text = empresa.Pais;
+            txtPais.Text = empresa.Pais;
         }
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace EmpresaApp
                 empresa.Telefono = txtTelefono.Text;
                 empresa.Ciudad = txtCiudad.Text;
                 empresa.Departamento = txtDepartamento.Text;
-                empresa.Pais = txtNombre.Text;
+                empresa.Pais = txtPais.Text;
                 empresa.FechaModificacion = DateTime.Now;
             }
             else
@@ -93,7 +93,7 @@ namespace EmpresaApp
                     Telefono = txtTelefono.Text,
                     Ciudad = txtCiudad.Text,
                     Departamento = txtDepartamento.Text,
-                    Pais = txtNombre.Text,
+                    Pais = txtPais.Text,
                     FechaCreacion = DateTime.Now,
                     FechaModificacion = DateTime.Now
                 };
@@ -107,7 +107,7 @@ namespace EmpresaApp
             Close(); // Cierra el formulario
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             // Cerrar el formulario sin guardar
             Close();
@@ -290,6 +290,7 @@ namespace EmpresaApp
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // lblTitulo
             // 
@@ -331,6 +332,5 @@ namespace EmpresaApp
 
         }
 
-        
     }
 }
